@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import {View,StyleSheet} from 'react-native';
 import DoctorCard from './DoctorCard';
 
-function DoctorList({ doctors }) {
-  return (
+function DoctorList({doctors}){
+  return(
     <View style={styles.doctorGrid}>
-      {doctors.map((doctor, index) => (
+      {doctors.map((doctor,index) =>(
         <DoctorCard
           key={index}
           name={doctor.name}
@@ -18,12 +18,20 @@ function DoctorList({ doctors }) {
   );
 }
 
-const styles = StyleSheet.create({
-  doctorGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
+const styles=StyleSheet.create({
+  doctorGrid:{
+    flexDirection:'row',
+    flexWrap:'wrap',
+    justifyContent:'space-between',
+    width:'90%',
+  },
+  footer: {
+    marginTop: 20,
+    padding: 15,
+    backgroundColor: '#FFFFFF',
     width: '100%',
+    alignItems: 'center',
+    elevation: 2,
   },
 });
 
