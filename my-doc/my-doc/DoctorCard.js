@@ -1,14 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-function DoctorCard({ name, specialty, rating, avatar }) {  // Add avatar prop here
+function DoctorCard({ name, specialty, rating, avatar }) {
   return (
     <View style={styles.card}>
       <View style={styles.avatar}>
-        <Image
-          source={avatar}  // Use the avatar prop here
-          style={styles.avatarImage}
-        />
+        <Image source={avatar} style={styles.avatarImage} />
       </View>
       <Text style={styles.name}>{name}</Text>
       <Text style={styles.specialty}>{specialty}</Text>
@@ -27,13 +24,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderRadius: 20,
     padding: 20,
-    width: '45%', // Adjust width to make two cards fit on one row
+    width: '45%',
     marginBottom: 20,
     alignItems: 'center',
-    elevation: 4, // Adds shadow on Android
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
+    elevation: 4,
   },
   avatar: {
     width: 70,
@@ -67,7 +61,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   ratingOval: {
-    backgroundColor: '#5A81F7', // Blue background for the rating
+    backgroundColor: '#5A81F7',
     borderRadius: 20,
     paddingHorizontal: 10,
     paddingVertical: 5,
